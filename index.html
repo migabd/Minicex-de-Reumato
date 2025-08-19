@@ -3,198 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudos em Ortopedia</title>
+    <title>Estudos em Ortopedia - Layout Aprimorado</title>
     
-    <!-- Google Fonts: Poppins -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* CSS Variables for easy theme management */
-        :root {
-            --primary-color: #0067f4;
-            --secondary-color: #00d4ff;
-            --background-start: #f0f4f8;
-            --background-end: #d9e2ec;
-            --text-color: #2c3e50;
-            --card-bg-color: rgba(255, 255, 255, 0.7);
-            --shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            --border-radius: 16px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Estilo base para o corpo da página */
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--background-start), var(--background-end));
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            overflow: hidden; /* Previne barras de rolagem causadas pelas formas animadas */
+            position: relative;
+        }
+
+        /* Contêiner para as formas animadas do fundo */
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
             overflow: hidden;
         }
 
-        /* Main Container with Glassmorphism effect */
-        .container {
-            width: 100%;
-            max-width: 1000px;
-            background-color: var(--card-bg-color);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
+        /* Estilo individual das formas */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 103, 244, 0.1);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape1 { width: 150px; height: 150px; top: 10%; left: 5%; animation-duration: 25s; }
+        .shape2 { width: 200px; height: 200px; top: 20%; left: 80%; animation-duration: 30s; }
+        .shape3 { width: 100px; height: 100px; top: 70%; left: 15%; animation-duration: 22s; }
+        .shape4 { width: 250px; height: 250px; top: 80%; left: 60%; animation-duration: 35s; }
+        .shape5 { width: 80px; height: 80px; top: 50%; left: 40%; animation-duration: 18s; }
+
+        /* Animação de flutuação para as formas */
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-50px) rotate(180deg); opacity: 0.5; }
+            100% { transform: translateY(0) rotate(360deg); opacity: 0.7; }
+        }
+
+        /* Efeito de "glassmorphism" para o contêiner principal */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.6);
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 50px;
-            text-align: center;
-            animation: fadeInScaleUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         }
-
-        /* Header Section */
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 550px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* Navigation Grid for Buttons */
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        /* Button Styles with enhanced hover effect */
-        .nav-button {
-            background-color: #fff;
-            color: var(--text-color);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            border: 1px solid transparent;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .nav-button:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(0, 103, 244, 0.15);
-            border-color: var(--primary-color);
-        }
-
-        .nav-button i {
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: transform 0.3s ease;
-        }
-        
-        .nav-button:hover i {
-            transform: scale(1.1);
-        }
-
-        /* Animations */
-        @keyframes fadeInScaleUp {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px;
-            }
-            header h1 {
-                font-size: 2.2rem;
-            }
-            .nav-grid {
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 20px;
-            }
-        }
-        
-         @media (max-width: 480px) {
-            .nav-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
     </style>
 </head>
-<body>
+<body class="flex items-center justify-center min-h-screen p-4">
 
-    <div class="container">
-        <header>
-            <h1>Estudos em Ortopedia</h1>
-            <p>Navegue pelas seções para encontrar materiais de estudo.</p>
-        </header>
+    <!-- Fundo animado -->
+    <div class="background-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+        <div class="shape shape5"></div>
+    </div>
 
-        <main>
-            <div class="nav-grid">
-                <!-- Links para as pastas do repositório -->
-                <a href="Coluna-Vertebral" class="nav-button">
-                    <i class="fa-solid fa-bone"></i>
-                    <span>Coluna Vertebral</span>
-                </a>
-                <a href="Ombro" class="nav-button">
-                    <i class="fa-solid fa-user-injured"></i>
-                    <span>Ombro</span>
-                </a>
-                <a href="Cotovelo" class="nav-button">
-                    <i class="fa-solid fa-hand-point-right"></i>
-                    <span>Cotovelo</span>
-                </a>
-                <a href="Mao-e-Punho" class="nav-button">
-                    <i class="fa-solid fa-hand-paper"></i>
-                    <span>Mão e Punho</span>
-                </a>
-                <a href="Quadril" class="nav-button">
-                    <i class="fa-solid fa-wheelchair"></i>
-                    <span>Quadril</span>
-                </a>
-                <a href="Joelho" class="nav-button">
-                    <i class="fa-solid fa-person-walking"></i>
-                    <span>Joelho</span>
-                </a>
-                <a href="Pe-e-Tornozelo" class="nav-button">
-                    <i class="fa-solid fa-shoe-prints"></i>
-                    <span>Pé e Tornozelo</span>
-                </a>
-            </div>
-        </main>
+    <!-- Contêiner principal -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto">
+        <div class="glass-effect shadow-2xl rounded-3xl p-8 sm:p-12 text-center">
+            
+            <!-- Cabeçalho -->
+            <header class="mb-10">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-3 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-book-medical text-blue-600"></i>
+                    <span>Estudos em Ortopedia</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-xl mx-auto">
+                    Navegue pelas seções para encontrar materiais de estudo detalhados.
+                </p>
+            </header>
+
+            <!-- Grade de navegação -->
+            <main>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Botão de Navegação: Coluna Vertebral -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-bone text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Coluna Vertebral</span>
+                    </a>
+                    
+                    <!-- Botão de Navegação: Ombro -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-user-injured text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Ombro</span>
+                    </a>
+
+                    <!-- Botão de Navegação: Cotovelo -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-hand-point-right text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Cotovelo</span>
+                    </a>
+
+                    <!-- Botão de Navegação: Mão e Punho -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-hand-paper text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Mão e Punho</span>
+                    </a>
+
+                    <!-- Botão de Navegação: Quadril -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-wheelchair text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Quadril</span>
+                    </a>
+
+                    <!-- Botão de Navegação: Joelho -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-person-walking text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Joelho</span>
+                    </a>
+
+                    <!-- Botão de Navegação: Pé e Tornozelo -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-shoe-prints text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Pé e Tornozelo</span>
+                    </a>
+                    
+                    <!-- Botão de Navegação Adicional (Exemplo) -->
+                    <a href="#" class="group flex flex-col items-center justify-center p-6 bg-white/70 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                        <div class="w-16 h-16 mb-4 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-500 group-hover:scale-110">
+                            <i class="fa-solid fa-notes-medical text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Artigos</span>
+                    </a>
+                </div>
+            </main>
+        </div>
     </div>
 
 </body>
