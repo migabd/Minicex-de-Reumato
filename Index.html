@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Reumatologia</title>
+    <!-- Incluindo o Tailwind CSS para estilização rápida e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Usando a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+    <div class="container mx-auto max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+        
+        <!-- Título Principal -->
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-10">
+            Minicex de reumatologia
+        </h1>
+        
+        <!-- Texto Introdutório Didático -->
+
+        <!-- Container dos Botões de Navegação -->
+        <div class="flex flex-col md:flex-row gap-6 justify-center">
+            
+            <!-- Botão 1: Doenças -->
+            <a href="doenças.html" 
+               class="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <span class="text-2xl font-semibold">
+                    Doenças Reumáticas
+                </span>
+                <p class="mt-2 text-blue-100">
+                    Clique aqui para ver a lista e detalhes.
+                </p>
+            </a>
+            
+            <!-- Botão 2: Exame Físico -->
+            <a href="reumato.html" 
+               class="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 text-white py-4 px-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-teal-300">
+                <span class="text-2xl font-semibold">
+                    Exame Físico
+                </span>
+                <p class="mt-2 text-teal-100">
+                    Clique aqui para ver detalhes do exame físico.
+                </p>
+            </a>
+            
+        </div>
+
+        <!-- Rodapé simples -->
+        <footer class="mt-12 text-gray-500 text-sm">
+            <p>&copy; 2025 Minice-de-Reumato. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
+
