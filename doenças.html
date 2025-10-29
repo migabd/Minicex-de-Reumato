@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critérios Diagnósticos</title>
+    <!-- Carregando o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo para a seta do <details> */
+        summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] summary::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+        details[open] summary {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+            Guia de Critérios Diagnósticos
+        </h1>
+
+        <!-- Aviso Importante -->
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 mb-8 rounded-md shadow-sm" role="alert">
+            <p class="font-bold">Atenção:</p>
+            <p>Este material é apenas para fins educacionais e informativos. Ele <strong>não substitui</strong> uma consulta, diagnóstico ou tratamento médico profissional. Sempre procure o conselho de seu médico ou outro profissional de saúde qualificado em caso de dúvidas sobre uma condição médica.</p>
+        </div>
+
+        <!-- Seção Osteomuscular -->
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">
+            Doenças Osteomusculares
+        </h2>
+        <div class="space-y-4">
+
+            <!-- Fibromialgia -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Fibromialgia (1º lugar)
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Baseado nos critérios do <strong>ACR (American College of Rheumatology) de 2016</strong>, o diagnóstico é clínico e considera:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Índice de Dor Generalizada (WPI - Widespread Pain Index):</strong> Uma pontuação de quantas áreas (de 19) o paciente sentiu dor na última semana.</li>
+                        <li><strong>Escala de Gravidade dos Sintomas (SSS - Symptom Severity Scale):</strong> Uma pontuação baseada na gravidade da fadiga, sono não reparador, sintomas cognitivos e outros sintomas somáticos.</li>
+                        <li class="font-semibold"><strong>Critério Diagnóstico:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>WPI &ge; 7</strong> E <strong>SSS &ge; 5</strong></li>
+                                <li>OU</li>
+                                <li><strong>WPI entre 4–6</strong> E <strong>SSS &ge; 9</strong></li>
+                            </ul>
+                        </li>
+                        <li>Os sintomas devem estar presentes em um nível semelhante por <strong>pelo menos 3 meses</strong>.</li>
+                        <li>O paciente <strong>não tem outra doença</strong> que possa explicar a dor.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Síndrome do Túnel do Carpo (STC) -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Síndrome do Túnel do Carpo (STC) (2º lugar)
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">O diagnóstico é primariamente clínico, baseado nos sintomas e em testes provocativos:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sintomas Clássicos:</strong> Dor, parestesia (formigamento) ou dormência na distribuição do nervo mediano (polegar, indicador, dedo médio e metade do anelar).</li>
+                        <li><strong>Piora Noturna:</strong> Os sintomas frequentemente acordam o paciente à noite.</li>
+                        <li><strong>Manobras Provocativas Positivas:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>Sinal de Tinel:</strong> Percussão do nervo mediano no punho causa choque ou formigamento nos dedos.</li>
+                                <li><strong>Teste de Phalen:</strong> Flexão forçada dos punhos por 60 segundos reproduz os sintomas.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Exame Confirmatório:</strong> A <strong>Eletroneuromiografia (ENMG)</strong> é o padrão-ouro para confirmar a compressão do nervo e sua gravidade.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Síndrome do Manguito Rotador -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Síndrome do Manguito Rotador e Músculos Dorsais
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Diagnóstico clínico baseado na dor no ombro (pior à noite e com movimentos de elevação) e em testes de exame físico específicos. A imagem que você enviou lista as manobras-chave:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Testes para Impacto Subacromial:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>Teste de Neer:</strong> Elevação passiva forçada do braço em rotação interna.</li>
+                                <li><strong>Teste de Hawkins-Kennedy (Yocum):</strong> Elevação do ombro a 90° com rotação interna forçada.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Testes para Tendões Específicos:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>Teste de Jobe (Empty Can):</strong> Avalia o supraespinhal.</li>
+                                <li><strong>Teste de Patte:</strong> Avalia o infraespinhal.</li>
+                                <li><strong>Teste de Gerber (Lift-off):</strong> Avalia o subescapular.</li>
+                                <li><strong>Abdominal Press:</strong> Também avalia o subescapular.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Teste da Cancela (Drop Arm Test):</strong> Sugere ruptura completa (paciente não consegue segurar o braço elevado).</li>
+                        <li><strong>Exames de Imagem:</strong> <strong>Ultrassonografia (USG)</strong> ou <strong>Ressonância Magnética (RM)</strong> confirmam a lesão, sua extensão e localização.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Tendinites -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Tendinites
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">O diagnóstico de tendinite (ou mais precisamente, tendinopatia) é <strong>eminentemente clínico</strong>. Os critérios gerais incluem:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Dor Localizada:</strong> Dor bem definida sobre um tendão específico.</li>
+                        <li><strong>Dor à Palpação:</strong> O tendão é sensível ao toque no local da inflamação/degeneração.</li>
+                        <li><strong>Dor ao Movimento:</strong> A dor é reproduzida quando o músculo associado ao tendão é contraído contra resistência ou quando o tendão é alongado passivamente.</li>
+                        <li><strong>Manobras Específicas:</strong> Como a imagem menciona ("Saiba as manobras"), cada tendinite tem seus próprios testes (ex: teste de Finkelstein para De Quervain no punho, teste de Cozen para epicondilite lateral no cotovelo).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Osteoartrite (Artrose) -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Osteoartrite (Artrose)
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">O diagnóstico é uma combinação de achados clínicos e radiológicos (Raio-X).</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sintomas Clínicos:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>Dor articular que piora com o uso e melhora com o repouso.</li>
+                                <li><strong>Rigidez Matinal:</strong> Presente, mas de curta duração (geralmente < 30 minutos).</li>
+                                <li>Crepitação (estalidos) ao movimento.</li>
+                                <li>Perda de amplitude de movimento.</li>
+                                <li>Pode haver edema articular, mas sem grande inflamação.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Achados Radiológicos (Raio-X):</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>Diminuição do espaço articular.</li>
+                                <li><strong>Osteófitos:</strong> "Bicos de papagaio".</li>
+                                <li>Esclerose subcondral (osso mais denso abaixo da cartilagem).</li>
+                                <li>Cistos subcondrais.</li>
+                            </ul>
+                        </li>
+                        <li>O <strong>ACR</strong> possui critérios específicos para OA de joelho, quadril e mãos, combinando esses achados.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Osteopenia e Osteoporose -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Osteopenia e Osteoporose
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">O diagnóstico é feito pela <strong>Densitometria Óssea (DEXA)</strong>, que mede a densidade mineral óssea (DMO). Os critérios da Organização Mundial da Saúde (OMS) baseiam-se no <strong>T-Score</strong> (comparação com a DMO de um adulto jovem saudável):</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Normal:</strong> T-Score &ge; -1.0 desvio padrão (DP).</li>
+                        <li><strong>Osteopenia (Baixa Massa Óssea):</strong> T-Score entre -1.0 e -2.5 DP.</li>
+                        <li><strong>Osteoporose:</strong> T-Score &le; -2.5 DP.</li>
+                        <li><strong>Osteoporose Grave (Estabelecida):</strong> T-Score &le; -2.5 DP <strong>mais</strong> a presença de uma ou mais fraturas por fragilidade.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Síndrome do Piriforme -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Síndrome do Piriforme
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Baseado nos critérios de classificação <strong>ACR/EULAR de 2010</strong>. Um paciente com <strong>pontuação &ge; 6 (de 10)</strong> é classificado com AR (desde que tenha sinovite clínica em pelo menos uma articulação não explicada por outra doença).</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sintomas:</strong> Dor profunda na região glútea ("nádega") que pode irradiar para a parte posterior da coxa, mimetizando uma dor ciática.</li>
+                        <li>A dor piora ao sentar por longos períodos.</li>
+                        <li>Dor à palpação profunda do músculo piriforme.</li>
+                        <li><strong>Testes Provocativos Positivos:</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>Teste FAIR:</strong> Dor ao realizar Flexão, Adução e Rotação Interna do quadril.</li>
+                                <li><strong>Teste de Freiberg:</strong> Dor com a rotação interna passiva do quadril.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Fasciíte Plantar -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Fasciíte Plantar
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Diagnóstico primariamente clínico:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sintoma Clássico:</strong> Dor na base do calcanhar (inserção da fáscia plantar no calcâneo).</li>
+                        <li><strong>Discinesia Pós-estática:</strong> A dor é tipicamente <strong>pior nos primeiros passos pela manhã</strong> ou após um período de inatividade.</li>
+                        <li>Dor à palpação profunda do tubérculo medial do calcâneo.</li>
+                        <li><strong>Teste de Windlass Positivo:</strong> Dor é reproduzida com a dorsiflexão passiva dos dedos do pé.</li>
+                        <li><strong>Exames de Imagem:</strong> USG ou RM podem mostrar espessamento da fáscia plantar e excluir outras causas, mas geralmente não são necessários.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Neuroma de Morton -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-800 font-medium">
+                    Neuroma de Morton
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Diagnóstico clínico, com suporte de imagem:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sintomas:</strong> Dor em "queimação" ou "choque" no antepé, mais comum entre o 3º e 4º dedos.</li>
+                        <li>Sensação de dormência ou parestesia nos dedos adjacentes.</li>
+                        <li>Sensação de "ter uma pedra" ou "uma dobra na meia" dentro do sapato.</li>
+                        <li>A dor piora com sapatos apertados e melhora ao tirar o sapato e massagear o pé.</li>
+                        <li><strong>Sinal de Mulder Positivo:</strong> Compressão lateral dos metatarsos enquanto se pressiona o espaço interdigital por baixo. Um "clique" palpável e doloroso é positivo.</li>
+                        <li><strong>Exames de Imagem:</strong> USG ou RM podem confirmar o espessamento do nervo interdigital (o neuroma).</li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
+
+        <!-- Seção Autoimunes -->
+        <h2 class="text-2xl font-semibold text-purple-700 mt-10 mb-4 pb-2 border-b-2 border-purple-200">
+            Doenças Autoimunes
+        </h2>
+        <div class="space-y-4">
+
+            <!-- Artrite Reumatoide (AR) -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-purple-50 hover:bg-purple-100 text-purple-800 font-medium">
+                    Artrite Reumatoide (AR)
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Baseado nos critérios de classificação <strong>ACR/EULAR de 2010</strong>. Um paciente com <strong>pontuação $\geq$ 6 (de 10)</strong> é classificado com AR (desde que tenha sinovite clínica em pelo menos uma articulação não explicada por outra doença).</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Acometimento Articular (0-5 pontos):</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>1 articulação grande: 0 pts</li>
+                                <li>2-10 articulações grandes: 1 pt</li>
+                                <li>1-3 articulações pequenas: 2 pts</li>
+                                <li>4-10 articulações pequenas: 3 pts</li>
+                                <li>>10 articulações (pelo menos 1 pequena): 5 pts</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sorologia (0-3 pontos):</strong> (Fator Reumatoide - FR; Anti-CCP)
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>FR negativo E Anti-CCP negativo: 0 pts</li>
+                                <li>FR positivo (baixo) OU Anti-CCP positivo (baixo): 2 pts</li>
+                                <li>FR positivo (alto) OU Anti-CCP positivo (alto): 3 pts</li>
+                            </ul>
+                        </li>
+                        <li><strong>Provas de Fase Aguda (0-1 ponto):</strong> (PCR e VHS)
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>PCR normal E VHS normal: 0 pts</li>
+                                <li>PCR anormal OU VHS anormal: 1 pt</li>
+                            </ul>
+                        </li>
+                        <li><strong>Duração dos Sintomas (0-1 ponto):</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>< 6 semanas: 0 pts</li>
+                                <li>&ge; 6 semanas: 1 pt</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Lúpus Eritematoso Sistêmico (LES) -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-purple-50 hover:bg-purple-100 text-purple-800 font-medium">
+                    Lúpus Eritematoso Sistêmico (LES)
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">Baseado nos critérios de classificação <strong>EULAR/ACR de 2019</strong>. É um sistema de pontos ponderados.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Critério de Entrada (Obrigatório):</strong>
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li><strong>ANA (Fator Antinuclear) &ge; 1:80</strong>. Se negativo, não é LES.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Critérios Aditivos:</strong> Se o ANA for positivo, soma-se os pontos dos critérios abaixo (usa-se apenas o de maior peso em cada domínio).
+                            <ul class="list-decimal list-inside ml-4 mt-1">
+                                <li>Febre (2 pts)</li>
+                                <li>Leucopenia (3 pts), Trombocitopenia (4 pts), Hemólise autoimune (4 pts)</li>
+                                <li>Delirium (2 pts), Psicose (3 pts), Convulsão (5 pts)</li>
+                                <li>Úlceras orais (2 pts), Lúpus cutâneo agudo (6 pts), etc.</li>
+                                <li>Derrame pleural ou pericárdico (5 pts)</li>
+                                <li>Artrite (6 pts)</li>
+                                <li>Nefrite lúpica (proteinúria ou biópsia) (4 a 10 pts)</li>
+                                <li>Anticorpos Antifosfolípide (2 pts)</li>
+                                <li>Complemento baixo (C3 ou C4) (3-4 pts)</li>
+                                <li>Anticorpos específicos (Anti-dsDNA ou Anti-Sm) (6 pts)</li>
+                            </ul>
+                        </li>
+                        <li class="font-semibold"><strong>Critério Diagnóstico: Pontuação &ge; 10.</strong></li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Psoríase / Artrite Psoriásica -->
+            <details class="bg-white shadow-md rounded-lg overflow-hidden">
+                <summary class="p-5 cursor-pointer bg-purple-50 hover:bg-purple-100 text-purple-800 font-medium">
+                    Psoríase / Artrite Psoriásica
+                </summary>
+                <div class="p-5 border-t border-gray-200">
+                    <p class="mb-4">O diagnóstico da <strong>Psoríase (cutânea)</strong> é clínico, baseado na aparência das lesões (placas eritematosas, descamativas, prateadas, bem delimitadas, em locais típicos como cotovelos e joelhos).</p>
+                    <p class="mb-4">Para a <strong>Artrite Psoriásica (PsA)</strong>, usam-se os <strong>Critérios CASPAR (2006)</strong>. O paciente deve ter doença articular inflamatória (artrite, espondilite ou entesite) e:</p>
+                    <p class="mb-2 font-semibold">Pontuação &ge; 3 (de 5 categorias):</p>
+                    <ul class="list-decimal list-inside space-y-2">
+                        <li><strong>Psoríase:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>Psoríase atual (diagnosticada por médico): <strong>2 pontos</strong></li>
+                                <li>História pessoal de psoríase (se não houver atual): <strong>1 ponto</strong></li>
+                                <li>História familiar de psoríase (se paciente não tiver): <strong>1 ponto</strong></li>
+                            </ul>
+                        </li>
+                        <li><strong>Distrofia Ungueal (Unhas):</strong> (Onicólise, depressões "em dedal", hiperqueratose): <strong>1 ponto</strong></li>
+                        <li><strong>Fator Reumatoide (FR) Negativo:</strong> <strong>1 ponto</strong></li>
+                        <li><strong>Dactilite ("Dedo em Salsicha"):</strong> (Edema de um dedo inteiro, atual ou histórico): <strong>1 ponto</strong></li>
+                        <li><strong>Evidência Radiológica:</strong> (Formação óssea justa-articular no Raio-X de mãos ou pés): <strong>1 ponto</strong></li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            Critérios baseados em diretrizes de sociedades médicas como ACR, EULAR, OMS e CASPAR.
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
